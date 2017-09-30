@@ -8,5 +8,3 @@
 - name: Creates the index.php file
   template: src=index.php.j2 dest=/var/www/html/index.php
 
-- name: Creates the php.ini file
-  template: src=php.ini dest=/etc/php.ini
