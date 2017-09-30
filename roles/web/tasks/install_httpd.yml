@@ -20,7 +20,7 @@
 
 - name: inserver php extension
   lineinfile: dest=/etc/php.ini state=present 
-		line="extension=mysqli.so"
+	      line="extension=mysqli.so"
 
 - name: http service state
   service: name=httpd state=started enabled=yes
