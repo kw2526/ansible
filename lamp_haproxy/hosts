@@ -1,0 +1,12 @@
+[webservers]
+172.17.0.2
+172.17.0.3
+
+[dbservers]
+172.17.0.4
+
+[lbservers]
+172.17.0.5
+
+[monitoring]
+172.17.0.6
