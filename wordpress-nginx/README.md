@@ -1,3 +1,14 @@
+
+## Spin up a Docker instance 
+
+docker run -i -t  --name wordpressV1.0 centos:ansiclient /bin/bash 
+Note down it's ipv4 address and add it on the hosts file 
+
+#cat hosts  
+[wordpress]
+172.17.0.8
+
+
 ## WordPress+Nginx+PHP-FPM Deployment
 
 - Requires Ansible 1.2 or newer
@@ -5,9 +16,7 @@
 
 These playbooks deploy a simple all-in-one configuration of the popular
 WordPress blogging platform and CMS, frontend by the Nginx web server and the
-PHP-FPM process manager. To use, copy the `hosts.example` file to `hosts` and 
-edit the `hosts` inventory file to include the names or URLs of the servers
-you want to deploy.
+PHP-FPM process manager. 
 
 Then run the playbook, like this:
 
