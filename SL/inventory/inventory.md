@@ -65,7 +65,7 @@ Ex:
 Ansible Inventory
 Try and represent the data given in the below table in Ansible Inventory format
 
-
+```
 Server Alias	Server Name	OS	User	Password
 sql_db1	sql01.xyz.com	Linux	root	Lin$Pass
 sql_db2	sql02.xyz.com	Linux	root	Lin$Pass
@@ -80,3 +80,4 @@ web_nodes	web_node1, web_node2, web_node3
 boston_nodes	sql_db1, web_node1
 dallas_nodes	sql_db2, web_node2, web_node3
 us_nodes	boston_nodes, dallas_nodes
+```
