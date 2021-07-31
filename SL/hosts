@@ -1,0 +1,15 @@
+ctrler ansible_host=localhost
+target ansible_host=PIP
+
+[all]
+ctrler
+target
+
+[webservers]
+target
+
+[dbservers]
+target
+
+
+Ansible Inventory

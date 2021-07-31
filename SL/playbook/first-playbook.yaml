@@ -1,0 +1,21 @@
+-
+    name: 'Execute two commands on web_server'
+    hosts: webservers
+    tasks:
+        -
+            name: 'Execute a date command'
+            command: date
+        -
+            name: 'Execute a command to display hosts file'
+            command: 'cat /etc/hosts'
+
+-
+    name: 'Execute two commands on dbservers'
+    hosts: dbservers
+    tasks:
+        -
+            name: 'Execute a whoami command'
+            command: whoami
+        -
+            name: 'Execute a command to display users'
+            command: 'cat /etc/passwd'
