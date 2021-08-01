@@ -1,0 +1,14 @@
+- name: Install http and php etc
+  yum: name={{ item }} state=removed
+  with_items:
+   - httpd
+   - php
+   - php-mysql
+   - git
+   - libsemanage-python
+   - libselinux-python
+   - vim
+- name: http service state
+  service: 
+    name: httpd 
+    state: started  
