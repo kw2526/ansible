@@ -1,0 +1,12 @@
+ - hosts: all
+   user: root
+   become: yes
+   connection: ssh
+   gather_facts: yes
+
+   vars:
+     pkg: httpd,php
+
+   tasks:
+     - name: install "{{pkg}}"
+       action: yum name='{{pkg}}' state=present
