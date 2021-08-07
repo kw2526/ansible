@@ -40,12 +40,13 @@
 # Here's another example of host ranges, this time there are no
 # leading 0s:
 
+
 ## db-[99:101]-node.example.com
 sql_db1 ansible_host=sql01.xyz.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Lin$Pass
 sql_db2 ansible_host=sql02.xyz.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Lin$Pass
-web_node1 ansible_host=web01.xyz.com ansible_connection=winrm ansible_user=administrator ansible_ssh_pass=Win$Pass
-web_node2 ansible_host=web02.xyz.com ansible_connection=winrm asnible_user=administrator ansible_ssh_pass=Win$Pass
-web_node3 ansible_host=web03.xyz.com ansible_connection=winrm ansible_user=administrator ansible_ssh_pass=Win$Pass
+web_node1 ansible_host=web01.xyz.com ansible_connection=winrm ansible_user=administrator ansible_password=Win$Pass
+web_node2 ansible_host=web02.xyz.com ansible_connection=winrm ansible_user=administrator ansible_password=Win$Pass
+web_node3 ansible_host=web03.xyz.com ansible_connection=winrm ansible_user=administrator ansible_password=Win$Pass
 
 [db_nodes]
 sql_db1
@@ -54,10 +55,10 @@ sql_db2
 [web_nodes]
 web_node1
 web_node2
-web_node2
+web_node3
 
 [boston_nodes]
-sq_db1
+sql_db1
 web_node1
 
 [dallas_nodes]
@@ -67,4 +68,4 @@ web_node3
 
 [us_nodes:children]
 boston_nodes
-dallas_nodes
+dallas_nodes#
